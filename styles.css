@@ -12,7 +12,7 @@
      --defaultText:#223a66;
     --default-color: #223a66; /* Default color used for the majority of the text content across the entire website */
     /*--heading-color: #151515;*/ /* Color for headings, subheadings and title throughout the website */
-    --heading-color: #223a66; /* Color for headings, subheadings and title throughout the website */
+    --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
     --accent-color: #ffffff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
     --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
     --contrast-color: #312f2f; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -20,6 +20,7 @@
     --contacticons: #0d6efd;
     --contactletter: #ffffff;
     --testmonialIcons: #0d6efd;
+    
   }
   
   /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -192,6 +193,119 @@
   .homeText2{
     color: var(--homeTextColor);
   }
+  
+/*--------------------------------------------------------------
+  # SimulatorSection
+  --------------------------------------------------------------*/
+  <style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .main-button {
+      padding: 20px 40px;
+      font-size: 1.5rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  }
+
+  .main-button:hover {
+      background-color: #2980b9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+  }
+
+  .main-button:active {
+      transform: translateY(0);
+  }
+
+  .modal-content {
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.15);
+  }
+
+  .modal-header {
+      background-color: #3498db;
+      color: white;
+      border-radius: 15px 15px 0 0;
+  }
+
+  .machine-input {
+      margin: 10px 0;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+  }
+
+  .machine-input:hover {
+      background: #e9ecef;
+  }
+
+  .btn-calculate {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      max-width: 200px;
+  }
+
+  .btn-calculate:hover {
+      background-color: #2980b9;
+      transform: translateY(-2px);
+  }
+
+  .result {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #e8f6ff;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1.2em;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+  }
+
+  .result.show {
+      opacity: 1;
+  }
+
+  .price {
+      color: #27ae60;
+      font-weight: bold;
+      font-size: 1.4em;
+  }
+
+  .error {
+      color: #e74c3c;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #fde8e8;
+      animation: shake 0.5s ease-in-out;
+  }
+
+  @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+  }
+</style>
+
   /*--------------------------------------------------------------
   # feature Section
   --------------------------------------------------------------*/
